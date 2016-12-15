@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/MedAssist-0.0.1-SNAPSHOT --target/MedAssist-0.0.1-SNAPSHOT.war
+web: java $JAVA_OPTS -cp target/classes:target/MedAssist.war Home.jsp
