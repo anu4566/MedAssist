@@ -1,1 +1,1 @@
-web:sh WebContent
+web: java $JAVA_OPTS -cp target/classes:target/dependency/* MedAssist
