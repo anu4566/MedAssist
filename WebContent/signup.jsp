@@ -144,7 +144,7 @@
     											 <div class="col-xs-12 col-sm-12 col-md-12"> 
     												<div class="form-group">
     													
-    													<input type="text" name="fname" id="fname" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" placeholder="Enter your First Name: ">
+    													<input type="text" name="fname" pattern="[A-Za-z]+" required id="fname" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" placeholder="Enter your First Name: ">
                                                         <div class="validation"></div>
     												</div>
     											</div>
@@ -152,7 +152,7 @@
     											   <div class="col-xs-12 col-sm-12 col-md-12">
     												<div class="form-group">
     												
-    													<input type="text" name="lname" id="lname" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" placeholder="Enter your Last name">
+    													<input type="text" name="lname" pattern="[A-Za-z]+" required id="lname" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" placeholder="Enter your Last name">
     													
                                                         <div class="validation"></div>
     												</div>
@@ -164,7 +164,7 @@
     											 <div class="col-xs-12 col-sm-12 col-md-12"> 
     												<div class="form-group">
     													
-    													<input type="email" name="email" id="email" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" placeholder="Enter your email address: ">
+    													<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required id="email" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" placeholder="Enter your email address: ">
                                                         <div class="validation"></div>
     												</div>
     											</div>
@@ -172,7 +172,7 @@
     											   <div class="col-xs-12 col-sm-12 col-md-12">
     												<div class="form-group">
     												
-    													<input type="password" name="pwd" id="pwd" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" placeholder="Enter your password">
+    													<input type="password" name="pwd" pattern=".{6,}" title="Six or more characters" required id="pwd" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" placeholder="Enter your password">
     														<%String hidden = session.getAttribute("hiddenVal").toString();%>
     									
     													<input type = "hidden" name="hiddenVal" value = <%=hidden%> >
@@ -187,13 +187,14 @@
     											 <div class="col-xs-12 col-sm-12 col-md-12"> 
     												<div class="form-group">
     													
-    													<input type="tel" name="mob" id="mob" class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" placeholder="Enter your Mobile Number: ">
+    													<input type="tel" name="mob" id="mob" pattern="[0-9]+" required class="form-control input-md" data-rule="minlen:3" data-msg="Please enter at least 3 chars" placeholder="Enter your Mobile Number: ">
                                                         <div class="validation"></div>
     												</div>
     											</div>
     											
 											<!--   <button type="submit" formtarget="patient.jsp">Submit to a new window</button> -->
     										<input type="submit" value="Submit"  class="btn btn-skin btn-block btn-lg">
+    										</form>
 
   </div>
   </div>
